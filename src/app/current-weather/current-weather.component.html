@@ -1,0 +1,19 @@
+
+ <div  *ngIf="current.city"><h2>Current Weather</h2><br></div>
+<div *ngIf="current.city" style="display:flex; flex-wrap:wrap; justify-content: center ;width: 100%;">
+ 
+    <div class="p-shadow-1" style="padding: 10px;;">
+
+        <div>
+            <span>{{current.city}}, {{current.country}}, </span>
+            <span>{{current.date|date:'fullDate'}}</span>
+        </div>
+        <div>
+            <img [src]='current.image'>
+            <span>{{current.temperature|number:'1.0-0'}} °C</span>
+        </div>
+        <div>
+            {{current.description}}
+        </div>
+    </div>
+</div>
